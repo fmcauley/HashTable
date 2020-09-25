@@ -11,6 +11,7 @@ public class HashTable <T> {
     private var buckets: Array<T?>
     private var slots: Int = 0
     private var count = 0
+    private var duplicateValue: T?
     
     var keyCount : Int {
         get {
@@ -32,7 +33,10 @@ public class HashTable <T> {
     
     func insert(key k: T) {
         let index = preHash(key: k, andCapacity: capacity)
-        buckets.insert(k, at: index)
+        if buckets[index] != nil {
+            duplicateValue = k
+        }
+        buckets[index] = k
         count += 1
     }
     
@@ -45,6 +49,10 @@ public class HashTable <T> {
         let index = preHash(key: k, andCapacity: capacity)
         buckets[index] = nil
         return contains(key: k)
+    }
+    
+    func duplicate() -> T? {
+        return duplicateValue
     }
     
     

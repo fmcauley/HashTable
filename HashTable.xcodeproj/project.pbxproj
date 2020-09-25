@@ -17,6 +17,9 @@
 		F0E16EBF251CCB3C0031924A /* HashTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16EBE251CCB3C0031924A /* HashTableUITests.swift */; };
 		F0E16ED0251CCB660031924A /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16ECF251CCB660031924A /* HashTable.swift */; };
 		F0E16ED4251CCC3F0031924A /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16ECF251CCB660031924A /* HashTable.swift */; };
+		F0E16ED9251E72520031924A /* DuplicateFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16ED8251E72520031924A /* DuplicateFinder.swift */; };
+		F0E16EDA251E72520031924A /* DuplicateFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16ED8251E72520031924A /* DuplicateFinder.swift */; };
+		F0E16EDF251E72800031924A /* TestDuplicateFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16EDE251E72800031924A /* TestDuplicateFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 		F0E16EBE251CCB3C0031924A /* HashTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTableUITests.swift; sourceTree = "<group>"; };
 		F0E16EC0251CCB3C0031924A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E16ECF251CCB660031924A /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
+		F0E16ED8251E72520031924A /* DuplicateFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateFinder.swift; sourceTree = "<group>"; };
+		F0E16EDE251E72800031924A /* TestDuplicateFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDuplicateFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,7 @@
 				F0E16EA7251CCB3B0031924A /* LaunchScreen.storyboard */,
 				F0E16EAA251CCB3B0031924A /* Info.plist */,
 				F0E16ECF251CCB660031924A /* HashTable.swift */,
+				F0E16ED8251E72520031924A /* DuplicateFinder.swift */,
 			);
 			path = HashTable;
 			sourceTree = "<group>";
@@ -119,6 +125,7 @@
 			children = (
 				F0E16EB3251CCB3C0031924A /* HashTableTests.swift */,
 				F0E16EB5251CCB3C0031924A /* Info.plist */,
+				F0E16EDE251E72800031924A /* TestDuplicateFinder.swift */,
 			);
 			path = HashTableTests;
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 			files = (
 				F0E16EA1251CCB3B0031924A /* ViewController.swift in Sources */,
 				F0E16E9D251CCB3B0031924A /* AppDelegate.swift in Sources */,
+				F0E16ED9251E72520031924A /* DuplicateFinder.swift in Sources */,
 				F0E16ED0251CCB660031924A /* HashTable.swift in Sources */,
 				F0E16E9F251CCB3B0031924A /* SceneDelegate.swift in Sources */,
 			);
@@ -275,6 +283,8 @@
 			files = (
 				F0E16ED4251CCC3F0031924A /* HashTable.swift in Sources */,
 				F0E16EB4251CCB3C0031924A /* HashTableTests.swift in Sources */,
+				F0E16EDA251E72520031924A /* DuplicateFinder.swift in Sources */,
+				F0E16EDF251E72800031924A /* TestDuplicateFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

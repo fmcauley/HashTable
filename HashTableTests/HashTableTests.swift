@@ -61,5 +61,20 @@ class HashTableTests: XCTestCase {
         let output = hashSet.removeValue(key: key)
         XCTAssertEqual(output, expected)
     }
+    
+    func testThatDuplicateWillReturnADuplicateValue() {
+        let value = 32
+        let hashSet = HashTable<Int>(capacity: value)
+        let key = 23
+        let expected = 23
+        
+        hashSet.insert(key: key)
+        hashSet.insert(key: key)
+        
+        let output = hashSet.duplicate()
+        
+        XCTAssertEqual(expected, output)
+        
+    }
 
 }
