@@ -24,18 +24,6 @@ class HashTableTests: XCTestCase {
         XCTAssertEqual(hashSet.capacity, value)
     }
     
-    func testThatHashTableCanHashAKey() {
-        let value = 32
-        let hashSet = HashTable<Int>(capacity:value)
-        let key = 2
-        let capacity = hashSet.capacity
-        
-        let expected = testPreHash(key: key, andCapacity: capacity)
-        print(expected)
-        XCTAssertEqual(expected, hashSet.preHash(key: key, andCapacity: capacity))
-        
-    }
-    
     func testThatTheCountOfTheHashSetWillBeOneAfterAnInsert() {
         let value = 32
         let hashSet = HashTable<Int>(capacity: value)
@@ -50,7 +38,6 @@ class HashTableTests: XCTestCase {
         let hashSet = HashTable<Int>(capacity: value)
         let key = 23
         let expected = true
-        t
         hashSet.insert(key: key)
         let output = hashSet.contains(key: key)
         XCTAssertEqual(output, expected)
@@ -66,14 +53,13 @@ class HashTableTests: XCTestCase {
         XCTAssertEqual(output, expected)
     }
     
-    
-    // HELP FUNCTION for testing hashing
-    private func testPreHash(key k: Int, andCapacity m: Int) -> Int {
-        let a = 59389690744 //random number
-        let b = 30762909936 //random number
-        let p = 87178291199 //large prime fits with in the range of an unsigned integer
-        
-        return (((a*k + b) % p) % m)
+    func testThatTheRemovedValueIsNoLongerContainedInTheHashTable() {
+        let value = 32
+        let expected = false
+        let hashSet = HashTable<Int>(capacity: value)
+        let key = 23
+        let output = hashSet.removeValue(key: key)
+        XCTAssertEqual(output, expected)
     }
 
 }

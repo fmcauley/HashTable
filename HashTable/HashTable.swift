@@ -41,9 +41,16 @@ public class HashTable <T> {
         return (buckets[index] != nil)
     }
     
+    func removeValue(key k: T) -> Bool{
+        let index = preHash(key: k, andCapacity: capacity)
+        buckets[index] = nil
+        return contains(key: k)
+    }
+    
+    
     
     //this should be private and not exposed through interface
-    func preHash(key k: T, andCapacity m: Int) -> Int {
+    private func preHash(key k: T, andCapacity m: Int) -> Int {
         let a = 59389690744 //random number
         let b = 30762909936 //random number
         let p = 87178291199 //large prime fits with in the range of an unsigned integer
