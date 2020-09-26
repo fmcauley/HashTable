@@ -76,5 +76,17 @@ class HashTableTests: XCTestCase {
         XCTAssertEqual(expected, output)
         
     }
+    
+    func testThatStingsWorkInHashTable() {
+        let value = 32
+        let hashSet = HashTable<String>(capacity: value)
+        let key = "Joe Biden"
+        let expected = true
+        hashSet.insert(key: key)
+        let output = hashSet.contains(key: key)
+        
+        XCTAssertEqual(output, expected)
+        
+    }
 
 }
