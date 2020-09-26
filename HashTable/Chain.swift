@@ -1,0 +1,60 @@
+//
+//  Chain.swift
+//  HashTable
+//
+//  Created by Frank McAuley on 9/26/20.
+//
+
+import Foundation
+
+class ChainNode<T> {
+    var value: T?
+    var prev: ChainNode?
+    var next: ChainNode?
+}
+
+class Chain<T: Equatable> {
+    var head: ChainNode<T>
+    init(){
+        head = ChainNode<T>()
+    }
+    
+    func insert(_ tValue: T) {
+        guard head.value != nil else {
+            head.value = tValue
+            return
+        }
+        
+        let nextChild = ChainNode<T>()
+        
+        var current = head
+        while current.next != nil {
+            if let currentNext = current.next{
+                current = currentNext
+            }
+        }
+        nextChild.value = tValue
+        current.next = nextChild
+        nextChild.prev = current
+    }
+    
+    func search(_ tValue: T) -> T? {
+        
+        if head.value == tValue {
+            return head.value
+        }
+        
+        var current = head
+        while current.next != nil {
+            if let currentNext = current.next {
+                if currentNext.value == tValue{
+                    return currentNext.value
+                } else {
+                    current = currentNext
+                }
+            }
+        }
+        return nil
+    }
+    
+}

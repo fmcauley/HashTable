@@ -20,6 +20,9 @@
 		F0E16ED9251E72520031924A /* DuplicateFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16ED8251E72520031924A /* DuplicateFinder.swift */; };
 		F0E16EDA251E72520031924A /* DuplicateFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16ED8251E72520031924A /* DuplicateFinder.swift */; };
 		F0E16EDF251E72800031924A /* TestDuplicateFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16EDE251E72800031924A /* TestDuplicateFinder.swift */; };
+		F0E16EE4251FDC660031924A /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16EE3251FDC660031924A /* Chain.swift */; };
+		F0E16EE5251FDC660031924A /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16EE3251FDC660031924A /* Chain.swift */; };
+		F0E16EEA251FDC8C0031924A /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E16EE9251FDC8C0031924A /* ChainTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		F0E16ECF251CCB660031924A /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
 		F0E16ED8251E72520031924A /* DuplicateFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateFinder.swift; sourceTree = "<group>"; };
 		F0E16EDE251E72800031924A /* TestDuplicateFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDuplicateFinder.swift; sourceTree = "<group>"; };
+		F0E16EE3251FDC660031924A /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
+		F0E16EE9251FDC8C0031924A /* ChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +121,7 @@
 				F0E16EAA251CCB3B0031924A /* Info.plist */,
 				F0E16ECF251CCB660031924A /* HashTable.swift */,
 				F0E16ED8251E72520031924A /* DuplicateFinder.swift */,
+				F0E16EE3251FDC660031924A /* Chain.swift */,
 			);
 			path = HashTable;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 				F0E16EB3251CCB3C0031924A /* HashTableTests.swift */,
 				F0E16EB5251CCB3C0031924A /* Info.plist */,
 				F0E16EDE251E72800031924A /* TestDuplicateFinder.swift */,
+				F0E16EE9251FDC8C0031924A /* ChainTests.swift */,
 			);
 			path = HashTableTests;
 			sourceTree = "<group>";
@@ -272,6 +279,7 @@
 				F0E16EA1251CCB3B0031924A /* ViewController.swift in Sources */,
 				F0E16E9D251CCB3B0031924A /* AppDelegate.swift in Sources */,
 				F0E16ED9251E72520031924A /* DuplicateFinder.swift in Sources */,
+				F0E16EE4251FDC660031924A /* Chain.swift in Sources */,
 				F0E16ED0251CCB660031924A /* HashTable.swift in Sources */,
 				F0E16E9F251CCB3B0031924A /* SceneDelegate.swift in Sources */,
 			);
@@ -281,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E16EE5251FDC660031924A /* Chain.swift in Sources */,
 				F0E16ED4251CCC3F0031924A /* HashTable.swift in Sources */,
 				F0E16EB4251CCB3C0031924A /* HashTableTests.swift in Sources */,
+				F0E16EEA251FDC8C0031924A /* ChainTests.swift in Sources */,
 				F0E16EDA251E72520031924A /* DuplicateFinder.swift in Sources */,
 				F0E16EDF251E72800031924A /* TestDuplicateFinder.swift in Sources */,
 			);
