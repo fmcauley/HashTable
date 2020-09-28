@@ -87,7 +87,28 @@ class HashTableTests: XCTestCase {
         let output = hashSet.contains(key: key)
         
         XCTAssertEqual(output, expected)
-        
+    }
+    
+    func testThatHasTableCanCollectACountOfItemsInAChain() {
+        let value = 32
+        let hashSet = HashTable<String>(capacity: value)
+        let key1 = "Joe Biden"
+        let key2 = "Joe Biden"
+        hashSet.insert(key: key1)
+        hashSet.insert(key: key2)
+        let output = hashSet.itemCount(key: key2)
+        XCTAssertEqual(output, 2)
+    }
+    
+    func testThatHasTableCanCollectACountOfThreeItemsInAChain() {
+        let value = 32
+        let hashSet = HashTable<String>(capacity: value)
+        let key = "Joe Biden"
+        hashSet.insert(key: key)
+        hashSet.insert(key: key)
+        hashSet.insert(key: key)
+        let output = hashSet.itemCount(key: key)
+        XCTAssertEqual(output, 3)
     }
 
 }

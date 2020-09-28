@@ -64,6 +64,16 @@ public class HashTable <T: Equatable> {
         return duplicateValue
     }
     
+    func itemCount(key k: T) -> Int {
+        if contains(key: k){
+            let index = preHash(key: k, andCapacity: capacity)
+            if let keyCount = buckets[index]?.count(){
+                return keyCount
+            }
+        }
+       return 0
+    }
+    
     
     
     //func for hashing a string that has bit shift
