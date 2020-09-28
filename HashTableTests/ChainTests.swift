@@ -52,4 +52,32 @@ class ChainTests: XCTestCase {
         chain.insert(32)
         XCTAssertEqual(32, chain.search(32))
     }
+    
+    func testThatTheChainCanCountItsNumberOfElements(){
+        let chain = Chain<String>()
+        chain.insert("Frank")
+        chain.insert("Frank")
+        let output = chain.count()
+        XCTAssertEqual(output, 2)
+    }
+    
+    func testThatTheChainCanCountItsNumberOfElementsWhenThreeAreAdded(){
+        let chain = Chain<String>()
+        chain.insert("Frank")
+        chain.insert("Frank")
+        chain.insert("Frank")
+        let output = chain.count()
+        XCTAssertEqual(output, 3)
+    }
+    
+    func testThatTheChainCanCountItsNumberOfElementsWhenFiveAreAdded(){
+        let chain = Chain<String>()
+        chain.insert("Frank")
+        chain.insert("Frank")
+        chain.insert("Frank")
+        chain.insert("Frank")
+        chain.insert("Frank")
+        let output = chain.count()
+        XCTAssertEqual(output, 5)
+    }
 }
