@@ -37,10 +37,16 @@ public class HashTable <T: Equatable> {
             duplicateValue = k
         }
         //buckets[index] = k as? Chain<T>
-        let newChain = Chain<T>()
-        newChain.insert(k)
-        buckets[index] = newChain
-        count += 1
+        //is there a value there already?
+        if let chain: Chain = buckets[index]{
+            chain.insert(k)
+            count += 1
+        } else {
+            let newChain = Chain<T>()
+            newChain.insert(k)
+            buckets[index] = newChain
+            count += 1
+        }
     }
     
     func contains(key k: T) -> Bool {
