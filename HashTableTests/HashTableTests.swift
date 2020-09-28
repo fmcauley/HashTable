@@ -110,5 +110,16 @@ class HashTableTests: XCTestCase {
         let output = hashSet.itemCount(key: key)
         XCTAssertEqual(output, 3)
     }
+    
+    func testThatHasTableCanReturnTheValueForAnEntryThatHasMoreThanOneValue() {
+        let value = 32
+        let hashSet = HashTable<String>(capacity: value)
+        let key = "Joe Biden"
+        hashSet.insert(key: key)
+        hashSet.insert(key: key)
+        hashSet.insert(key: key)
+        let output = hashSet.allDuplicateKeys(key: key)
+        XCTAssertEqual(key, output)
+    }
 
 }

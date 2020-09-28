@@ -74,6 +74,13 @@ public class HashTable <T: Equatable> {
        return 0
     }
     
+    func allDuplicateKeys(key k: T) -> T? {
+        if contains(key: k) && itemCount(key: k) > 1 {
+            return k
+        }
+        return nil
+    }
+    
     
     
     //func for hashing a string that has bit shift

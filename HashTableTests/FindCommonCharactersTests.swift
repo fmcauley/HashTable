@@ -29,5 +29,12 @@ class FindCommonCharactersTests: XCTestCase {
         XCTAssertEqual([], output)
     }
 
+    func testThatGivenAnArrayOfThreeWordsTheDuplocatesCharactersWillBeReturned() {
+        let fcc = FindCommonCharacters()
+        let input = ["cool","lock","cook"]
+        let expected = ["c","o"]
+        let output = fcc.findCommonChars(input)
+        XCTAssertEqual(expected, output)
+    }
 
 }
