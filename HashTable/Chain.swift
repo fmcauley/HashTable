@@ -57,4 +57,23 @@ class Chain<T: Equatable> {
         return nil
     }
     
+    func count() -> Int {
+        guard head.value != nil else {
+            return 0
+        }
+        
+        var counter = 0
+        var current = head
+        while current.value != nil {
+            counter += 1
+            if let currentNext = current.next{
+                current = currentNext
+            } else {
+                break
+            }
+        }
+        
+        return counter
+    }
+    
 }
