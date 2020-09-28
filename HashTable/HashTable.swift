@@ -7,8 +7,8 @@
 
 import Foundation
 
-public class HashTable <T> {
-    private var buckets: Array<T?>
+public class HashTable <T: Equatable> {
+    private var buckets: Array<Chain<T>?>
     private var slots: Int = 0
     private var count = 0
     private var duplicateValue: T?
@@ -27,7 +27,7 @@ public class HashTable <T> {
     
     
     public init(capacity: Int = 16) {
-        self.buckets = Array<T?>(repeatElement(nil, count: capacity))
+        self.buckets = Array<Chain?>(repeatElement(nil, count: capacity))
         self.slots = buckets.capacity
     }
     
@@ -36,7 +36,10 @@ public class HashTable <T> {
         if buckets[index] != nil {
             duplicateValue = k
         }
-        buckets[index] = k
+        //buckets[index] = k as? Chain<T>
+        let newChain = Chain<T>()
+        newChain.insert(k)
+        buckets[index] = newChain
         count += 1
     }
     

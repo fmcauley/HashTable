@@ -34,10 +34,11 @@ class HashTableTests: XCTestCase {
     }
     
     func testThatTheBucketContainsaValueThatWasInserted() {
-        let value = 32
-        let hashSet = HashTable<Int>(capacity: value)
+        let capacity = 32
+        let hashSet = HashTable<Int>(capacity: capacity)
         let key = 23
         let expected = true
+        
         hashSet.insert(key: key)
         let output = hashSet.contains(key: key)
         XCTAssertEqual(output, expected)
