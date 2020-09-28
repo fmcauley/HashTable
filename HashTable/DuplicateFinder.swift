@@ -13,8 +13,10 @@ class DuplicateFinder {
         for x in arr {
             hashTable.insert(key: x)
         }
-        if let dupValue = hashTable.duplicate() {
-            return dupValue
+        for x in arr {
+            if let dups = hashTable.allDuplicateKeys(key: x){
+                return dups
+            }
         }
         return 0
     }

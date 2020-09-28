@@ -33,9 +33,6 @@ public class HashTable <T: Equatable> {
     
     func insert(key k: T) {
         let index = preHash(key: k, andCapacity: capacity)
-        if buckets[index] != nil {
-            duplicateValue = k
-        }
         //buckets[index] = k as? Chain<T>
         //is there a value there already?
         if let chain: Chain = buckets[index]{
@@ -58,10 +55,6 @@ public class HashTable <T: Equatable> {
         let index = preHash(key: k, andCapacity: capacity)
         buckets[index] = nil
         return contains(key: k)
-    }
-    
-    func duplicate() -> T? {
-        return duplicateValue
     }
     
     func itemCount(key k: T) -> Int {

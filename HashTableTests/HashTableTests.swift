@@ -72,7 +72,7 @@ class HashTableTests: XCTestCase {
         hashSet.insert(key: key)
         hashSet.insert(key: key)
         
-        let output = hashSet.duplicate()
+        let output = hashSet.allDuplicateKeys(key: key)
         
         XCTAssertEqual(expected, output)
         
